@@ -6,7 +6,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 app.disable('x-powered-by')
-app.use(bodyParser.json())
+app.use(parser.json())
 app.use(cors())
 
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'))
