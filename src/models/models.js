@@ -6,25 +6,26 @@ const filePath = path.join(__dirname, '../assets/db_posts.json')
 
 function getAll() {
   const data = readDB()
-  data.forEach(item => {
-    console.log(item.title);
-    console.log(item.body);
-  })
-  // console.log(data.title);
-  // console.log(data.body);
-  //const allPosts = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-  // console.log("Get all function here")
-  //return JSON.stringify(allPosts)
-  //return JSON.stringify(fs.readFileSync(filePath, 'utf-8'))
-  // console.log(result);
-  //return data
-}
-
-module.exports = {
-  getAll
+  return generateHTML(data)
+  // return data.map(item => {
+  //   return `<div class="post-title">${item.title}</div><div class="post-body">${item.body}</div>`
+  //   //const title = document.createElement('div')
+  // })
 }
 
 function readDB(){
   const post = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   return post.data
+}
+
+function generateHTML(data){
+  let array = data.map(item => {
+    return `<div class="post-title">${item.title}</div><div class="post-body">${item.body}</div>`
+  })
+  return array.join(' ')
+  //console.log(array.join(' '));
+}
+
+module.exports = {
+  getAll
 }
