@@ -14,34 +14,40 @@
         <!-- placeholder -->
       </div>
       <div class="column">
-        <div class="field">
-          <label class="label">Title</label>
-          <div class="control">
-            <input id="post-title" class="input" type="text" placeholder="Text input">
+        <form id="createNew" name="createNew">
+          <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+              <input id="post-title" class="input" type="text" placeholder="Text input">
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label class="label">Message</label>
-          <div class="control">
-            <textarea id="post-body" class="textarea" placeholder="Textarea"></textarea>
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea id="post-body" class="textarea" placeholder="Textarea"></textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Submit</button>
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Save</button>
+            </div>
+            <div class="control">
+              <a class="button is-text" href="index.html">Cancel</a>
+            </div>
           </div>
-          <div class="control">
-            <button class="button is-text">Cancel</button>
-          </div>
-        </div>
+        </form>
+
       </div> <!-- column -->
 
       <div class="column is-one-quarter">
         <!-- placeholder -->
       </div>
     </div>
-
+    
+    <script type="text/javascript" src="requests.js"></script>
+    <script type="text/javascript" src="Templates/index.js"></script>
+    <script type="text/javascript" src="Render/home.js"></script>
   </body>
 </html>
