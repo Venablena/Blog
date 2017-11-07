@@ -7,18 +7,20 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
     <link rel="stylesheet" href="style.css">
+
+
   </head>
   <body>
     <section class="hero is-success is-bold">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Hi here, write something!
+            Hi there, write something!
           </h1>
           <h2 class="subtitle">
             (Press the button)
           </h2>
-          <a class="button is-large is-inverted is-outlined" href="post.html">New Post</a>
+          <a class="button is-large is-success is-inverted is-outlined" id="newPost" href="#">New Post</a>
         </div>
       </div>
     </section>
@@ -26,10 +28,6 @@
       <!-- <div class="column is-one-quarter">
       </div> -->
       <div class="container" id="container">
-        <!-- <div id="container"> -->
-        <div class="post-title"></div>
-        <div class="post-body"></div>
-        <!-- </div> -->
       </div> <!-- column -->
 
       <!-- <div class="column is-one-quarter">
@@ -37,6 +35,9 @@
     <!-- </div> -->
     <script type="text/javascript" src="requests.js"></script>
     <script type="text/javascript" src="Templates/index.js"></script>
-    <script type="text/javascript" src="Render/home.js"></script>
+    <script type="text/javascript" src="Templates/form.js"></script>
+    <script src="Render/form.js"></script>
+    <script defer type="text/javascript" src="Render/home.js"></script>
+
   </body>
 </html>
