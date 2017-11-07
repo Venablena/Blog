@@ -2,14 +2,18 @@ console.log("hi, I'm index.js!");
 window.Template = {
   generateSnippets(data){
     const array = data.map(item => {
-      console.log(item);
-      const snippet = item.content.slice(0, 255) + '...'
+      let post = item.content
+      if(item.content.length > 255) {
+        const snippet = item.content.slice(0, 255) + '...'
+        post = `${snippet}<br><a class='button read-more'>Read More</a>`
+      }
       return `
         <div class="post-title">${item.title}</div>
-        <div class="post-body">${snippet}</div>
-        <a class='button read-more'>Read More</a>
+        <div class="post-body">${post}
+        <br>
         <a class="button is-text">Edit</a>
-        `
+        <a class="button">Delete</a>
+    `
     })
     return array.join(' ')
   }
