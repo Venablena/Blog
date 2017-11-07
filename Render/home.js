@@ -1,23 +1,27 @@
 console.log("This is home.js");
-//const url = 'http://localhost:3000/posts'
 
-// function getAll(){
-// return axios.get(`${url}`)
-//   .then(result => {
-//     document.querySelector('#container').innerHTML = Post.generateSnippets(result.data)
-//   })
-//   .catch(error => (error))
-// }
-//
-// getAll()
-window.home = {
-  init () {
-    Call.getAll()
+window.Render = {
+  init() {
+    Request.getAll()
       .then(result => {
-        document.querySelector('#container').innerHTML = Post.generateSnippets(result.data)
+        document.querySelector('#container').innerHTML = Template.generateSnippets(result.data)
       })
       .catch(error => (error))
+  },
+  newPost() {
+    Request.new()
+      .then(result => {
+        console.log(result.data);
+      })
   }
 }
-
-home.init()
+//Get all
+Render.init()
+//Create new
+document.querySelector('#createNew').addEventListener('submit', event => {
+  event.preventDefault()
+  const title = document.querySelector('#post-title').value
+  const content = document.querySelector('#post-body').value
+  Request.new({ title, content })
+  Render.init()
+})

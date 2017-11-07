@@ -1,7 +1,6 @@
 console.log("hi, I'm index.js!");
-window.Post = {
+window.Template = {
   generateSnippets(data){
-    console.log(data);
     let array = data.map(item => {
       const snippet = item.body.slice(0, 255) + '...'
       return `
