@@ -36,5 +36,5 @@ document.querySelector('#createNew').addEventListener('submit', event => {
   const content = document.querySelector('#post-body').value
   //console.log({title, content});
   Request.new({ title, content })
-  Render.init()
+  //Render.init()
 })
