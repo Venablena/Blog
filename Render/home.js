@@ -26,8 +26,9 @@ function deleteEvents(button){
   button.forEach(el => {
     el.addEventListener('click', () => {
       //destroy
-      console.log("delete");
-      const id = el.nextSibling.nextSibling.textContent;
+
+      const id = el.previousSibling.previousSibling.previousSibling.previousSibling.textContent;
+      console.log(id);
       //console.log(el.parentNode.lastChild);
     })
   })
@@ -36,7 +37,8 @@ function deleteEvents(button){
 function readMore(button){
   button.forEach(el =>{
     el.addEventListener('click', () => {
-      console.log("read more");
+      //Request.getOne()
+       console.log(el.nextSibling.nextSibling.textContent);
     })
   })
 }

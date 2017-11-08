@@ -1,5 +1,4 @@
 function templateForm(post){
-  console.log(post);
   return`
   <div class="columns">
     <div class="column is-one-quarter">

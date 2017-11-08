@@ -6,6 +6,7 @@ window.Request = {
     return axios.get(`${url}`)
   },
   show(id){
+    console.log('axios show');
     return axios.get(`${url}/${id}`)
   },
   new(body){
