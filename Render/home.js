@@ -37,8 +37,13 @@ function deleteEvents(button){
 function readMore(button){
   button.forEach(el =>{
     el.addEventListener('click', () => {
-      //Request.getOne()
-       console.log(el.nextSibling.nextSibling.textContent);
+       const id = el.nextSibling.nextSibling.textContent
+       return Request.show(id)
+       .then((result) => {
+         console.log(result.data);
+         document.querySelector('#container').innerHTML = result.data
+         //need a template here to change this into HTML!
+       })
     })
   })
 }
