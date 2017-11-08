@@ -5,6 +5,7 @@ function renderHome(){
       document.querySelector('#container').innerHTML = generateSnippets(result.data)
       editEvents(document.querySelectorAll(".btn-edit"))
       deleteEvents(document.querySelectorAll(".btn-del"))
+      readMore(document.querySelectorAll(".read-more"))
     })
     .catch(error => (error))
 }
@@ -14,8 +15,9 @@ document.addEventListener('DOMContentLoaded', ()=> renderHome())
 function editEvents(button){
   button.forEach(el => {
     el.addEventListener('click', () => {
-      console.log("edit");
-      templateForm(post = {id:'', title:'', content:''})
+      console.log(el.parentNode);
+      document.querySelector('#container').innerHTML = templateForm(
+        post = {id:'', title: '', content:''})
     })
   })
 }
@@ -25,6 +27,16 @@ function deleteEvents(button){
     el.addEventListener('click', () => {
       //destroy
       console.log("delete");
+      const id = el.nextSibling.nextSibling.textContent;
+      //console.log(el.parentNode.lastChild);
+    })
+  })
+}
+
+function readMore(button){
+  button.forEach(el =>{
+    el.addEventListener('click', () => {
+      console.log("read more");
     })
   })
 }
