@@ -1,4 +1,3 @@
-console.log("Forms");
 function templateForm(){
   return`
   <div class="columns">
@@ -25,7 +24,7 @@ function templateForm(){
             <button type="submit" class="button is-link">Save</button>
           </div>
           <div class="control">
-            <a class="button is-text" href="index.html">Cancel</a>
+            <a class="button is-text"  id="cancel">Cancel</a>
           </div>
         </div>
       </form>

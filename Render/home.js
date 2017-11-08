@@ -1,29 +1,10 @@
 console.log("This is home.js");
-
-window.Render = {
-  init() {
-    Request.getAll()
-      .then(result => {
-        document.querySelector('#container').innerHTML = Template.generateSnippets(result.data)
-      })
-      .catch(error => (error))
-  },
-  newPost() {
-    Request.new()
-      // .then(result => {
-      //   console.log(result.data);
-      // })
-  }
+function renderHome(){
+  Request.getAll()
+    .then(result => {
+      document.querySelector('#container').innerHTML = Template.generateSnippets(result.data)
+    })
+    .catch(error => (error))
 }
 //Get all
-Render.init()
-
-
-
-//Create new post
-document.querySelector('#createNew').addEventListener('submit', event => {
-  event.preventDefault()
-  const title = document.querySelector('#post-title').value
-  const content = document.querySelector('#post-body').value
-  Request.new({ title, content })
-})
+document.addEventListener('DOMContentLoaded', event => {renderHome()})
