@@ -29,7 +29,6 @@ function deleteEvents(button){
 
       const id = el.previousSibling.previousSibling.previousSibling.previousSibling.textContent;
       console.log(id);
-      //console.log(el.parentNode.lastChild);
     })
   })
 }
@@ -37,11 +36,13 @@ function deleteEvents(button){
 function readMore(button){
   button.forEach(el =>{
     el.addEventListener('click', () => {
-       const id = el.nextSibling.nextSibling.textContent
+      //  const id = el.nextSibling.nextSibling.textContent
+      const id = el.parentElement.parentElement.nextSibling.nextSibling.textContent
+      console.log(id)
        return Request.show(id)
        .then((result) => {
          console.log(result.data);
-         document.querySelector('#container').innerHTML = result.data
+         document.querySelector('#container').innerHTML = showOne(result.data)
          //need a template here to change this into HTML!
        })
     })
