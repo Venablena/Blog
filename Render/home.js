@@ -1,4 +1,6 @@
-console.log("This is home.js");
+//Display all when page refreshes
+document.addEventListener('DOMContentLoaded', ()=> renderHome())
+
 function renderHome(){
   Request.getAll()
     .then((result) => {
@@ -9,15 +11,16 @@ function renderHome(){
     })
     .catch(error => (error))
 }
-//Get all
-document.addEventListener('DOMContentLoaded', ()=> renderHome())
 
 function editEvents(button){
   button.forEach(el => {
     el.addEventListener('click', () => {
-      console.log(el.parentNode);
-      document.querySelector('#container').innerHTML = templateForm(
-        post = {id:'', title: '', content:''})
+      const id = el.previousSibling.previousSibling.textContent
+      Request.show(id)
+        .then((result) => {
+          document.querySelector('#container').innerHTML = templateForm(
+            post = { id:result.data.id, title: result.data.title, content: result.data.content })
+        })
     })
   })
 }
@@ -25,10 +28,10 @@ function editEvents(button){
 function deleteEvents(button){
   button.forEach(el => {
     el.addEventListener('click', () => {
-      //destroy
-
-      const id = el.previousSibling.previousSibling.previousSibling.previousSibling.textContent;
-      console.log(id);
+      const id = el.previousSibling.previousSibling.previousSibling.previousSibling.textContent
+      Request.destroy(id)
+       .then(() => renderHome())
+       .catch(error => (error))
     })
   })
 }
@@ -36,15 +39,11 @@ function deleteEvents(button){
 function readMore(button){
   button.forEach(el =>{
     el.addEventListener('click', () => {
-      //  const id = el.nextSibling.nextSibling.textContent
       const id = el.parentElement.parentElement.nextSibling.nextSibling.textContent
-      console.log(id)
-       return Request.show(id)
+       Request.show(id)
        .then((result) => {
-         console.log(result.data);
          document.querySelector('#container').innerHTML = showOne(result.data)
-         //need a template here to change this into HTML!
-       })
+       }).catch(error => (error))
     })
   })
 }

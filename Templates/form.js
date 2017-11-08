@@ -15,7 +15,7 @@ function templateForm(post){
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea id="post-body" class="textarea" placeholder="Textarea" value="${post.content}"></textarea>
+            <textarea id="post-body" class="textarea" placeholder="Textarea">${post.content}</textarea>
           </div>
         </div>
 

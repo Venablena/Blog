@@ -6,13 +6,12 @@ window.Request = {
     return axios.get(`${url}`)
   },
   show(id){
-    console.log('axios show');
     return axios.get(`${url}/${id}`)
   },
   new(body){
     return axios.post(`${url}`, body)
   },
-  remove(id){
+  destroy(id){
     return axios.delete(`${url}/${id}`)
   },
   update(id, body){
