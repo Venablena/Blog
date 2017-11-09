@@ -6,5 +6,6 @@ function generateSnippets(data){
     }
     return showOne(item)
   })
+  array.reverse()
   return array.join(' ')
 }
