@@ -1,10 +1,10 @@
-function templateForm(post){
+function templateForm(post, formId){
   return`
   <div class="columns">
     <div class="column is-one-quarter">
     </div>
     <div class="column">
-      <form id="createNew" name="createNew">
+      <form id="${formId}" name="createNew">
         <div class="field">
           <label class="label">Title</label>
           <div class="control">
