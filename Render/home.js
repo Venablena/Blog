@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', ()=> renderHome())
 
 function renderHome(){
+  document.querySelector("#newPost").addEventListener('click', renderForm)
   Request.getAll()
     .then((result) => {
       document.querySelector('#container').innerHTML = generateSnippets(result.data)
-      document.querySelector("#newPost").addEventListener('click', renderForm)
       editEvents(document.querySelectorAll(".btn-edit"))
       deleteEvents(document.querySelectorAll(".btn-del"))
       readMore(document.querySelectorAll(".read-more"))
@@ -20,19 +20,19 @@ function editEvents(button){
         .then((result) => {
           document.querySelector('#container').innerHTML = templateForm(
             post = { id:result.data.id, title: result.data.title, content: result.data.content }, 'updateForm')
-            updateEvent(document.querySelector('#updateForm'))
+            updateEvent(post.id, document.querySelector('#updateForm'))
          document.querySelector('#cancel').addEventListener('click', renderHome)
         })
     })
   })
 }
 
-function updateEvent(form){
+function updateEvent(id, form){
   form.addEventListener('submit', event => {
     event.preventDefault()
     const title = document.querySelector('#post-title').value
     const content = document.querySelector('#post-body').value
-    return Request.update({ title, content })
+    Request.update(id, { title, content })
       .then(() => renderHome())
       .catch(error => (error))
   })
