@@ -4,29 +4,27 @@
     <meta charset="utf-8">
     <title>BlogGet y Blog</title>
     <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="https://use.fontawesome.com/35e91a5fb0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
     <link rel="stylesheet" href="style.css">
-
-
   </head>
   <body>
-    <section class="hero is-success is-bold">
+    <section class="hero is-success is-bold is-medium">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
             Hi there, write something!
+            <a class="button is-large is-success is-inverted is-outlined is-pulled-right" id="newPost" href="#">New Post</a>
           </h1>
-          <h2 class="subtitle">
-            (Press the button)
-          </h2>
-          <a class="button is-large is-success is-inverted is-outlined" id="newPost" href="#">New Post</a>
         </div>
       </div>
     </section>
 
-    <div class="container" id="container">
-    </div> <!-- column -->
+    <div class="container">
+      <div class="columns is-multiline is-mobile is-centered" id="container"><!-- Posts go here -->
+      </div>
+    </div>
+
 
     <script src="requests.js"></script>
     <script src="Templates/index.js"></script>
@@ -36,7 +34,6 @@
     <script src="Render/new.js"></script>
     <script src="Render/home.js"></script>
     <script src="Render/edit.js"></script>
-    <!-- <script defer src="main.js"></script> -->
 
   </body>
 </html>

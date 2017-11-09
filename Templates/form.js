@@ -1,9 +1,7 @@
 function templateForm(post, formId){
   return`
-  <div class="columns">
-    <div class="column is-one-quarter">
-    </div>
-    <div class="column">
+
+    <div class="column is-half">
       <form id="${formId}" name="createNew">
         <div class="field">
           <label class="label">Title</label>
@@ -29,8 +27,7 @@ function templateForm(post, formId){
         </div>
       </form>
     </div>
-    <div class="column is-one-quarter">
-    </div>
-  </div>
+
+
   `
 }

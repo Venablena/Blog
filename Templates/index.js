@@ -4,7 +4,7 @@ function generateSnippets(data){
       const snippet = item.content.slice(0, 255) + '...'
       item.content = `${snippet}<div><a class='button is-text read-more'>Read More</a></div>`
     }
-    return showOne(item)
+    return `<div class="column is-one-quarter"${showOne(item)}</div>`
   })
   array.reverse()
   return array.join(' ')
