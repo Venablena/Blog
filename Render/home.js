@@ -43,9 +43,11 @@ function readMore(button){
       const id = el.parentElement.parentElement.nextSibling.nextSibling.textContent
        Request.show(id)
        .then((result) => {
+         let btnDel = document.querySelector('.btn-del')
          document.querySelector('#container').innerHTML = showOne(result.data)
-         document.querySelector('#cancel').addEventListener('click', renderHome)
-         editEvents(document.querySelectorAll('.btn-edit'))
+         document.querySelector('.btn-del').innerHTML = "Cancel" + btnDel.innerHTML
+         document.querySelector('.btn-del').addEventListener('click', renderHome)
+         document.querySelector('.btn-edit').className += ' is-hidden'
        })
        .catch(error => (error))
     })
