@@ -1,5 +1,10 @@
+.card, .card-content, .card-header {
+  background-image: url("2144.jpg");
+  font-family: "Covered By Your Grace"
+}
+
 .card-content {
-  /*background-color: #FEF9E7;*/
+  /*background-image: url("2144.jpg");*/
   min-height: 240px;
   position: relative;
 }

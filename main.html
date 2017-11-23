@@ -19,24 +19,21 @@
       </div>
     </section>
 
-
-      <div class="card" background="../img/${background}" font-family="${font}">
-        <header class="card-header">
-         <p class="card-header-title">${item.title}</p>
-        </header>
-        <div class="card-content">
-          <div class="content post-body">${item.content}</div>
-          <div class="id is-hidden">${item.id}</div>
-          <a class="button btn-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-          <a class="btn-del">
-          <i class="fa fa-times" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-
     <div class="container">
-      <!-- Posts go here -->
-        <div class="columns is-multiline is-centered" id="container">
+      <div class="columns is-multiline is-centered" id="container">
+        <div class="card" background="../img/${background}">
+          <header class="card-header">
+           <p class="card-header-title">${item.title}</p>
+          </header>
+          <div class="card-content">
+            <div class="content post-body">${item.content}</div>
+            <div class="id is-hidden">${item.id}</div>
+            <a class="button btn-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+            <a class="btn-del">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div><!-- Posts go here -->
       </div>
     </div>
 
