@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=> renderHome())
 
 function renderHome(){
+  document.querySelector("#newPost").classList.remove("is-hidden")
   document.querySelector("#newPost").addEventListener('click', renderForm)
   Request.getAll()
     .then((result) => {

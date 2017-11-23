@@ -19,6 +19,25 @@
   margin-bottom: 2rem;
 }
 
+.label, body, .title {
+  font-family: "Autour One", cursive;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+body {
+  background: no-repeat, center, 100% url(img/scratched-and-scraped-metal-texture-2.jpg);
+  min-height: 100vh;
+}
+
+.body-overlay {
+  background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(245,245,220,0.5));
+  min-height: 100vh;
+}
+
 .btn-del, .btn-edit {
   position: absolute;
   bottom: 0.5rem
@@ -38,5 +57,19 @@ a {
 
 #popUp {
   position: absolute;
+}
 
+.fa {
+  color: grey;
+  opacity: 0.3;
+  text-shadow: 1px 1px 2px #fefefe;
+}
+
+.fa-plus {
+  color: white;
+  opacity: initial
+}
+
+#cancel {
+  color: white;
 }

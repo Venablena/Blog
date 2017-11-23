@@ -6,35 +6,41 @@
     <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://use.fontawesome.com/35e91a5fb0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Crafty+Girls|Dawning+of+a+New+Day|Gloria+Hallelujah|Homemade+Apple|La+Belle+Aurore|Loved+by+the+King|Mrs+Saint+Delafield|Over+the+Rainbow|Permanent+Marker|Reenie+Beanie|Sacramento|Shadows+Into+Light|Shadows+Into+Light+Two|Sue+Ellen+Francisco|Waiting+for+the+Sunrise" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Covered+By+Your+Grace|Crafty+Girls|Dawning+of+a+New+Day|Gloria+Hallelujah|Homemade+Apple|La+Belle+Aurore|Loved+by+the+King|Permanent+Marker|Reenie+Beanie|Sacramento|Shadows+Into+Light|Shadows+Into+Light+Two|Sue+Ellen+Francisco|Waiting+for+the+Sunrise|Autour+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <section class="hero is-success is-bold has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">Hi there, write something!</h1>
-          <a class="button is-large is-success is-inverted is-outlined" id="newPost" href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+    <div class="body-overlay">
+
+      <section class="hero is-bold has-text-centered">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Write it down</h1>
+            <a id="newPost" href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+              </span>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="columns is-multiline is-centered" id="container"><!-- Posts go here -->
         </div>
       </div>
-    </section>
 
-    <div class="container">
-      <div class="columns is-multiline is-centered" id="container"><!-- Posts go here -->
-      </div>
+
+      <script src="requests.js"></script>
+      <script type="Templates/styling.js"></script>
+      <script src="Templates/index.js"></script>
+      <script src="Templates/form.js"></script>
+      <script src="Render/form.js"></script>
+      <script src="Templates/single.js"></script>
+      <script src="Render/new.js"></script>
+      <script src="Render/home.js"></script>
+      <script src="Render/edit.js"></script>
+      <script src="Templates/read_more.js"></script>
     </div>
-
-
-    <script src="requests.js"></script>
-    <script type="Templates/styling.js"></script>
-    <script src="Templates/index.js"></script>
-    <script src="Templates/form.js"></script>
-    <script src="Render/form.js"></script>
-    <script src="Templates/single.js"></script>
-    <script src="Render/new.js"></script>
-    <script src="Render/home.js"></script>
-    <script src="Render/edit.js"></script>
-    <script src="Templates/read_more.js"></script>
-
   </body>
 </html>

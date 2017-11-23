@@ -7,7 +7,7 @@ function showOne(item){
       <div class="card-content">
         <div class="content post-body">${item.content}</div>
         <div class="id is-hidden">${item.id}</div>
-        <a class="button btn-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        <a class="btn-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
         <a class="btn-del">
         <i class="fa fa-times" aria-hidden="true"></i>
         </a>
@@ -32,10 +32,8 @@ const fonts = [
   "Covered By Your Grace",
   "Reenie Beanie",
   "Sue Ellen Francisco",
-  "Mrs Saint Delafield",
   "Dawning of a New Day",
   "Waiting for the Sunrise",
-  "Over the Rainbow",
   "Loved by the King",
   "Crafty Girls",
   "La Belle Aurore"
