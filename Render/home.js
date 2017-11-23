@@ -23,20 +23,6 @@ function deleteEvents(button){
   })
 }
 
-// function readMore(button){
-//   button.forEach(el =>{
-//     el.addEventListener('click', () => {
-//       const id = el.parentElement.parentElement.nextSibling.nextSibling.textContent
-//        Request.show(id)
-//        .then((result) => {
-//          popUp(showOne(result.data))
-//          document.querySelector('#cancel').addEventListener('click', renderHome)
-//          // editEvents(document.querySelectorAll('.btn-edit'))
-//        }).catch(error => (error))
-//     })
-//   })
-// }
-
 function readMore(button){
   button.forEach(el =>{
     el.addEventListener('click', () => {

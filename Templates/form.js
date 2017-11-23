@@ -13,7 +13,7 @@ function templateForm(post, formId){
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea id="post-body" class="textarea" placeholder="Textarea">${post.content}</textarea>
+            <textarea id="post-body" class="textarea" placeholder="Textarea" rows="16">${post.content}</textarea>
           </div>
         </div>
 

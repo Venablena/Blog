@@ -1,15 +1,8 @@
 .card-content {
-  /*display: flex;
-  align-items: stretch;
-  flex-direction: row;*/
   background-color: #FEF9E7;
   min-height: 240px;
   position: relative;
 }
-
-/*.post-body {
-  flex: 1 100%;
-}*/
 
 .card-header {
   background-color: #F9E79F;
@@ -42,5 +35,5 @@ a {
 
 #popUp {
   position: absolute;
-  
+
 }
