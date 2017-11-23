@@ -1,24 +1,22 @@
-
-
 const fonts = [
-  "font-family: 'Gloria Hallelujah', cursive;",
-  "font-family: 'Amatic SC', cursive;",
-  "font-family: 'Permanent Marker', cursive;",
-  "font-family: 'Shadows Into Light', cursive;",
-  "font-family: 'Shadows Into Light Two', cursive;",
-  "font-family: 'Sacramento', cursive;",
-  "font-family: 'Homemade Apple', cursive;",
-  "font-family: 'Covered By Your Grace', cursive;",
-  "font-family: 'Reenie Beanie', cursive;",
-  "font-family: 'Sue Ellen Francisco', cursive;",
-  "font-family: 'Butterfly Kids', cursive;",
-  "font-family: 'Mrs Saint Delafield', cursive;",
-  "font-family: 'Dawning of a New Day', cursive;",
-  "font-family: 'Waiting for the Sunrise', cursive;",
-  "font-family: 'Over the Rainbow', cursive;",
-  "font-family: 'Loved by the King', cursive;",
-  "font-family: 'Crafty Girls', cursive;",
-  "font-family: 'La Belle Aurore', cursive;"
+  "Gloria Hallelujah",
+  "Amatic SC",
+  "Permanent Marker",
+  "Shadows Into Light",
+  "Shadows Into Light Two",
+  "Sacramento",
+  "Homemade Apple",
+  "Covered By Your Grace",
+  "Reenie Beanie",
+  "Sue Ellen Francisco",
+  "Butterfly Kids",
+  "Mrs Saint Delafield",
+  "Dawning of a New Day",
+  "Waiting for the Sunrise",
+  "Over the Rainbow",
+  "Loved by the King",
+  "Crafty Girls",
+  "La Belle Aurore"
 ]
 
 const papers = [
@@ -39,10 +37,10 @@ const papers = [
 
 function background(papers){
   var idx = Math.floor(Math.random() * papers.length)
-  return papers(idx)
+  return papers[idx]
 }
 
 function chooseFont(fonts){
   var idx = Math.floor(Math.random() * fonts.length)
-  return fonts(idx)
+  return fonts[idx]
 }
