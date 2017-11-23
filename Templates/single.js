@@ -1,6 +1,6 @@
 function showOne(item){
 
-  return `<div class="card">
+  return `<div class="card" background="2144.jpg">
     <header class="card-header">
      <p class="card-header-title">${item.title}</p>
     </header>
