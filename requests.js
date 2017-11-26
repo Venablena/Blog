@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/posts'
+const url = 'https://take-a-note-of-this.herokuapp.com/posts'
 
 window.Request = {
   getAll(){
